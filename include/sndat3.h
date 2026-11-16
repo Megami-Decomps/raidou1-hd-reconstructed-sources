@@ -1,0 +1,50 @@
+#pragma once
+#include "types.h"
+
+extern void *BgmTbl;
+extern void *SeTbl;
+extern void *SiboTbl;
+extern s16 *at3_bgm_out;
+extern s16 *at3_se_out;
+extern s16 *at3_swapbgm_out;
+extern s16 *at3_outbuf;
+extern s16 *at3_zerobuf;
+extern s32 at3_bgm_nowloadid;
+extern s32 at3_bgm_request_flag;
+
+s32 sndNameToID_AT3SE(char *name);
+void Init(void);
+void sndBgmGetInfo(void *info);
+void sndBgmSetInfo(void *info);
+void sndBgmLoadFile(char **fname);
+void sndBgmLoadId(s32 id);
+s32 sndBgmStatus(void);
+void sndBgmPlay(s32 id, s64 startTimeMs);
+void sndVoiceBgmPlay(s32 id, s64 startTimeMs);
+void sndBgmPlayLoop(s32 id);
+void sndBgmFadeIn(s32 id, s64 startTimeMs);
+void sndBgmContinue(void);
+void sndBgmStop(void);
+void sndImmediateBgmStop(void);
+void sndBgmTop(void);
+void sndBgmFadeOut(void);
+void sndBgmFadeOut2(void);
+void sndBgmFree(void);
+void sndSeLoadFile(char **fname);
+void sndSeLoadId(s32 id);
+void sndSe2LoadId(s32 id);
+void sndSeLoadFromMem(void *data, s32 size, s32 mode);
+s32 sndSeStatus(void);
+void sndSePlay(s32 type);
+void sndDeadSePlay_VolAngle(s32 devilid, s32 aVolume, f32 Angle);
+void sndSeStop(s32 id, s32 type);
+void sndSeStop_name(char *name, s32 type);
+void sndSeFree(void);
+void sndSeFadeOut(void);
+void sndBgmLoadId_XF(s32 id);
+s32 sndBgmStatus_XF(void);
+void sndBgmReqestClear(void);
+s32 sndBgmReqestCheck(void);
+s32 sndBgmGetNowPlayID(void);
+s32 sndDebugPrint(void);
+s32 sndSeDebugPrint(void);

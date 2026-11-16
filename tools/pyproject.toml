@@ -1,0 +1,44 @@
+[project]
+name = "raidoudump"
+version = "0.1.0"
+description = "Reconstruct clean C headers/sources from Il2CppDumper output of Raidou HD"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6", "pyright>=1.1.380"]
+
+[project.scripts]
+raidoudump = "raidou.raidoudump:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["raidou*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["raidou/tests"]
+
+[tool.ruff]
+line-length = 100
+src = ["."]
+include = ["raidou/**/*.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "ANN"]
+
+[tool.ruff.lint.per-file-ignores]
+# Test fixtures embed real IL2CPP declaration lines that cannot be wrapped.
+"raidou/tests/*" = ["E501"]
+
+[tool.pyright]
+include = ["raidou"]
+# dump_il2cpp_binary.py runs inside IDA (imports idaapi/ida_*), unanalyzable off-host.
+exclude = ["raidou/dump_il2cpp_binary.py"]
+strict = ["raidou"]
+extraPaths = ["."]
+pythonVersion = "3.11"

@@ -1,0 +1,71 @@
+#pragma once
+#include "types.h"
+#include "kernel.h"
+
+typedef struct dds3ModelHandle_t dds3ModelHandle_t;
+typedef struct dds3ProcessID_t dds3ProcessID_t;
+typedef struct gohData_t gohData_t;
+typedef struct message_tag message_tag;
+
+extern s8 s_CameraTable[139];
+extern s32 is_CombineFlag;
+extern bool is_Direction2;
+
+void gohSetModelScale(s32 DevilID, dds3ModelHandle_t *Model);
+void gohModelFree(gohData_t *pData);
+void gohModelLightSet(char *pUnitPbName, dds3ModelHandle_t *Model);
+s32 gohInit(dds3ProcessID_t *PID);
+s32 gohDestroy(dds3ProcessID_t *PID);
+s32 Direction2Init(dds3ProcessID_t *PID);
+bool gohIsDirection2(void);
+s32 gohIsCombineFlag(void);
+s32 Direction2Destroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t Direction2CalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t Direction2DrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t Direction2UpdateProcess(dds3ProcessID_t *PID);
+s32 gohResultInit(dds3ProcessID_t *PID);
+s32 gohResultDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohResultCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohResultDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohResultUpdateProcess(dds3ProcessID_t *PID);
+s32 gohEndInit(dds3ProcessID_t *PID);
+s32 gohEndDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohEndCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohEndDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohEndUpdateProcess(dds3ProcessID_t *PID);
+s32 gohEnd2Init(dds3ProcessID_t *PID);
+s32 gohEnd2Destroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohEnd2CalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohEnd2DrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohEnd2UpdateProcess(dds3ProcessID_t *PID);
+s32 gohOmoideSkillInit(dds3ProcessID_t *PID);
+s32 gohOmoideSkillDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohOmoideSkillCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohOmoideSkillDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohOmoideSkillUpdateProcess(dds3ProcessID_t *PID);
+s32 gohSpiritInit(dds3ProcessID_t *PID);
+s32 gohSpiritDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSpiritCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSpiritDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSpiritUpdateProcess(dds3ProcessID_t *PID);
+s32 gohNewSwordSklInit(dds3ProcessID_t *PID);
+s32 gohNewSwordSklDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohNewSwordSklCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohNewSwordSklDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohNewSwordSklUpdateProcess(dds3ProcessID_t *PID);
+s32 gohEquipSwordInit(dds3ProcessID_t *PID);
+s32 gohEquipSwordDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohEquipSwordCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohEquipSwordDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohEquipSwordUpdateProcess(dds3ProcessID_t *PID);
+void gohModelLoad(gohData_t *pData);
+dds3ProcessFunc_t gohCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohUpdateProcess(dds3ProcessID_t *PID);
+s32 gohGetCameraTable(s32 iDevilId);
+void gohCallPartVoice(message_tag *_tag);
+void gohResultCalcStateMessageBirth(gohData_t *psSelf);
+bool gohResultCalcStateMessageGiveCard(gohData_t *psSelf);
+void gohResultCalcStateMessageWait(gohData_t *psSelf);
+void gohResultCalcStateFadeOut(gohData_t *psSelf);
+void gohResultCalcStateFadeOutWait(gohData_t *psSelf);

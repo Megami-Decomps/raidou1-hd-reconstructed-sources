@@ -1,0 +1,258 @@
+#pragma once
+#include "types.h"
+#include "CMP_STATUS_TYPE.h"
+#include "kernel.h"
+
+typedef enum {
+    GOH_GUIDE_TOP = 0,
+    GOH_GUIDE_CMB_MENU = 1,
+    GOH_GUIDE_CMB1_H = 2,
+    GOH_GUIDE_CMB1 = 3,
+    GOH_GUIDE_CMB1_H_N = 4,
+    GOH_GUIDE_CMB1_N = 5,
+    GOH_GUIDE_CMB_ST = 6,
+    GOH_GUIDE_CMB_SKL_O = 7,
+    GOH_GUIDE_CMB_SKL = 8,
+    GOH_GUIDE_CMB_OMO = 9,
+    GOH_GUIDE_CMB2_H = 10,
+    GOH_GUIDE_CMB2 = 11,
+    GOH_GUIDE_NAT_SKL = 12,
+    GOH_GUIDE_OMO_SEL = 13,
+    GOH_GUIDE_OMO_INIT = 14,
+    GOH_GUIDE_BACK_BASIC = 15,
+    GOH_GUIDE_BACK_BASIC_CHK = 16,
+    GOH_GUIDE_NAT_SKL_SET = 17,
+    GOH_GUIDE_SORT_LV = 18,
+    GOH_GUIDE_SORT = 19,
+    GOH_GUIDE_SEARCHI = 20,
+    GOH_GUIDE_SEARCHI_N = 21,
+    GOH_GUIDE_SEARCHI_LIST = 22,
+    GOH_GUIDE_SEARCHI_BASIC = 23,
+    GOH_GUIDE_SEARCHI_BASIC_CHK = 24,
+    GOH_GUIDE_NATIVE_COMB_CHK = 25,
+    GOH_GUIDE_LAST_COMB_CHK = 26,
+    GOH_GUIDE_REN_TREE_SPIRIT = 27,
+    GOH_GUIDE_REN_TREE = 28,
+    GOH_GUIDE_REN_TREE_B_LOG = 29,
+    GOH_GUIDE_REN_TREE_LOG = 30,
+    GOH_GUIDE_REN_SPIRIT = 31,
+    GOH_GUIDE_REN_RST = 32,
+    GOH_GUIDE_REN_ST = 33,
+    GOH_GUIDE_REN_EQP = 34,
+    GOH_GUIDE_RCV_N = 35,
+    GOH_GUIDE_RCV = 36,
+    GOH_GUIDE_KARTE_MENU = 37,
+    GOH_GUIDE_KARTE_ENT = 38,
+    GOH_GUIDE_KARTE_PRO_ENT = 39,
+    GOH_GUIDE_KARTE_ENT_N = 40,
+    GOH_GUIDE_KARTE_PRO_ENT_N = 41,
+    GOH_GUIDE_KARTE_ENT_ST_N = 42,
+    GOH_GUIDE_KARTE_ENT_ST_N_NC = 43,
+    GOH_GUIDE_KARTE_ENT_ST_REG = 44,
+    GOH_GUIDE_KARTE_BROW_SEL = 45,
+    GOH_GUIDE_KARTE_BROW_SEL_F = 46,
+    GOH_GUIDE_KARTE_BROW_SEL_L = 47,
+    GOH_GUIDE_KARTE_BROW_SEL_LF = 48,
+    GOH_GUIDE_KARTE_BROW_NON = 49,
+    GOH_GUIDE_KARTE_PRO_BROW_SEL = 50,
+    GOH_GUIDE_KARTE_PRO_BROW_SEL_F = 51,
+    GOH_GUIDE_KARTE_PRO_BROW_SEL_L = 52,
+    GOH_GUIDE_KARTE_PRO_BROW_SEL_LF = 53,
+    GOH_GUIDE_KARTE_PRO_OW_SEL = 54,
+    GOH_GUIDE_KARTE_PRO_OW_SEL_F = 55,
+    GOH_GUIDE_KARTE_PRO_OW_SEL_L = 56,
+    GOH_GUIDE_KARTE_PRO_OW_SEL_LF = 57,
+    GOH_GUIDE_KARTE_BROW_ST = 58,
+    GOH_GUIDE_KARTE_BROW_VIW = 59,
+    GOH_GUIDE_TALK_MENU = 60,
+    GOH_GUIDE_SINAN_MENU = 61,
+} GOH_GUIDE;
+
+typedef struct dds3ProcessID_t dds3ProcessID_t;
+typedef struct gohData_t gohData_t;
+typedef struct jmsSeqUnit_t jmsSeqUnit_t;
+typedef struct sdatUnitWork_t sdatUnitWork_t;
+
+extern char *sceneName;
+extern char *uiSceneName;
+extern char *textAssetName;
+extern u8 s_bDrawBack;
+extern u8 s_bEndCmb;
+extern s32 g_count;
+extern jmsSeqUnit_t *gohSeqUnit;
+
+void gohSetDispButtonGuide(GOH_GUIDE _guide, bool _status, bool _d);
+void gohUnloadScene(char *_sceneName);
+s32 gohCmbSearchiInit(dds3ProcessID_t *PID);
+s32 gohCmbSearchiDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCmbSearchiCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCmbSearchiDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCmbSearchiUpdateProcess(dds3ProcessID_t *PID);
+s32 gohSearchiErrorInit(dds3ProcessID_t *PID);
+s32 gohSearchiErrorDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSearchiErrorCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSearchiErrorDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSearchiErrorUpdateProcess(dds3ProcessID_t *PID);
+s32 gohSearchiResultInit(dds3ProcessID_t *PID);
+s32 gohSearchiResultDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSearchiResultCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSearchiResultDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSearchiResultUpdateProcess(dds3ProcessID_t *PID);
+void gohMoveCmbCsrFunc(void);
+s32 gohSearchiCmbInit(dds3ProcessID_t *PID);
+s32 gohSearchiCmbDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSearchiCmbCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSearchiCmbDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSearchiCmbUpdateProcess(dds3ProcessID_t *PID);
+s32 gohCmbSelInit(dds3ProcessID_t *PID);
+s32 gohCmbSelDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCmbSelCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCmbSelDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCmbSelUpdateProcess(dds3ProcessID_t *PID);
+s32 gohCmb1Init(dds3ProcessID_t *PID);
+s32 gohCmb1Destroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCmb1CalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCmb1DrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCmb1UpdateProcess(dds3ProcessID_t *PID);
+s32 gohCmb2Init(dds3ProcessID_t *PID);
+s32 gohCmb2Destroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCmb2CalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCmb2DrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCmb2UpdateProcess(dds3ProcessID_t *PID);
+s32 gohSwordInit(dds3ProcessID_t *PID);
+s32 gohSwordDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSwordCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSwordDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSwordUpdateProcess(dds3ProcessID_t *PID);
+s32 gohSword2Init(dds3ProcessID_t *PID);
+s32 gohSword2Destroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSword2CalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSword2DrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSword2UpdateProcess(dds3ProcessID_t *PID);
+s32 gohSwordTreeInit(dds3ProcessID_t *PID);
+s32 gohSwordTreeDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSwordTreeCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSwordTreeDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSwordTreeUpdateProcess(dds3ProcessID_t *PID);
+s32 gohStatInit(dds3ProcessID_t *PID);
+s32 gohStatDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohStatCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohStatDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohStatUpdateProcess(dds3ProcessID_t *PID);
+void gohReturnBarthDevil(gohData_t *pData);
+void gohStartConfirmMes(gohData_t *pData);
+s32 gohConfirmInit(dds3ProcessID_t *PID);
+s32 gohConfirmDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohConfirmCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohConfirmDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohConfirmUpdateProcess(dds3ProcessID_t *PID);
+s32 gohCyuuseiInit(dds3ProcessID_t *PID);
+s32 gohCyuuseiDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCyuuseiCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCyuuseiDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCyuuseiUpdateProcess(dds3ProcessID_t *PID);
+void gohGoodbyPartVoicePlay(s32 _devilID);
+s32 gohAccidentInit(dds3ProcessID_t *PID);
+s32 gohAccidentDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohAccidentCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohAccidentDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohAccidentUpdateProcess(dds3ProcessID_t *PID);
+s32 gohRecoverInit(dds3ProcessID_t *PID);
+s32 gohRecoverDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohRecoverCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohRecoverDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohRecoverUpdateProcess(dds3ProcessID_t *PID);
+s32 gohTalkInit(dds3ProcessID_t *PID);
+s32 gohTalkDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohTalkCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohTalkDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohTalkUpdateProcess(dds3ProcessID_t *PID);
+s32 gohMiscInit(dds3ProcessID_t *PID);
+s32 gohMiscDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohMiscCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohMiscDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohMiscUpdateProcess(dds3ProcessID_t *PID);
+s32 gohSinanInit(dds3ProcessID_t *PID);
+s32 gohSinanDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSinanCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSinanDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSinanUpdateProcess(dds3ProcessID_t *PID);
+s32 gohCombCntInit(dds3ProcessID_t *PID);
+s32 gohCombCntDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCombCntCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCombCntDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCombCntUpdateProcess(dds3ProcessID_t *PID);
+s32 gohErrorInit(dds3ProcessID_t *PID);
+s32 gohErrorDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohErrorCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohErrorDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohErrorUpdateProcess(dds3ProcessID_t *PID);
+s32 gohBookInit(dds3ProcessID_t *PID);
+s32 gohBookDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohBookCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohBookDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohBookUpdateProcess(dds3ProcessID_t *PID);
+s32 gohCyuuseiStartDirection(gohData_t *pData);
+s32 gohCheckScrRun(dds3ProcessID_t *PID);
+s32 gohScrControl(dds3ProcessID_t *PID);
+void gohCreateCombineResult(gohData_t *pSelf, s32 Step);
+void *gohCreateCombineResultAllAsync(gohData_t *pSelf);
+void gohCreateCombineResultAll(gohData_t *pSelf);
+s32 gohSelectMenuUpdate(void *pCmdMenu);
+s32 gohGetSelDevilStockIndex(gohData_t *pData, s32 Index);
+s32 gohGetSelSwordIndex(gohData_t *pData);
+s32 gohGetSelDevilID(gohData_t *pData, s32 Type);
+void gohSceneOffFunc(void);
+void gohStartStatusDraw(gohData_t *pData, sdatUnitWork_t *pUnit, CMP_STATUS_TYPE Mode, s32 SwordNo);
+s32 gohStopStatusDraw(gohData_t *pData, s32 Mode, bool _cmpNoEnd);
+s32 gohCheckBgDraw(gohData_t *pData);
+void gohCreateDevSelList(gohData_t *pData);
+s32 gohCreateSwordList(gohData_t *pData);
+s32 gohCreateRecoverList(gohData_t *pData);
+dds3ProcessFunc_t gohRootWaitCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohRootWaitDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohRootWaitUpdateProcess(dds3ProcessID_t *PID);
+s32 gohRootInit(dds3ProcessID_t *PID);
+s32 gohRootDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohRootCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohRootDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohRootUpdateProcess(dds3ProcessID_t *PID);
+s32 gohGetErrorType(gohData_t *pData);
+s32 gohCheckDevilError(gohData_t *pData);
+void gohStartBirthDevilStatus(gohData_t *pData);
+void gohSeqReturn(gohData_t *pData);
+void gohAppendNewDevil(gohData_t *pData);
+void gohCyuuseiCombLastCalc(gohData_t *pData);
+s32 gohRecoverExec(gohData_t *pData);
+dds3ProcessFunc_t EndProcess(dds3ProcessID_t *PID);
+bool gohSwordShortCutCheck(gohData_t *pData, bool typeChk);
+s32 gohBakNmlInit(dds3ProcessID_t *PID);
+s32 gohBakNmlDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohBakNmlCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohBakNmlDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohBakNmlUpdateProcess(dds3ProcessID_t *PID);
+s32 gohBakBakInit(dds3ProcessID_t *PID);
+s32 gohBakBakDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohBakBakCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohBakBakDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohBakBakUpdateProcess(dds3ProcessID_t *PID);
+s32 gohBakSearchInit(dds3ProcessID_t *PID);
+s32 gohBakSearchDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohBakSearchCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohBakSearchDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohBakSearchUpdateProcess(dds3ProcessID_t *PID);
+s32 gohBakTreeInit(dds3ProcessID_t *PID);
+s32 gohBakTreeDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohBakTreeCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohBakTreeDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohBakTreeUpdateProcess(dds3ProcessID_t *PID);
+s32 gohSwordShortCutInit(dds3ProcessID_t *PID);
+s32 gohSwordShortCutDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSwordShortCutCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSwordShortCutDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohSwordShortCutUpdateProcess(dds3ProcessID_t *PID);
+s32 gohCombShortCutInit(dds3ProcessID_t *PID);
+s32 gohCombShortCutDestroy(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCombShortCutCalcProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCombShortCutDrawProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohCombShortCutUpdateProcess(dds3ProcessID_t *PID);

@@ -1,0 +1,30 @@
+#pragma once
+#include "types.h"
+
+typedef enum {
+    SortType_None = 0,
+    SortType_Id = 1,
+    SortType_IdSort = 2,
+    SortType_Type = 3,
+    SortType_TypeSort = 4,
+    SortType_Available = 5,
+    SortType_Mag = 6,
+    SortType_SklHave = 7,
+    SortType_Get = 8,
+    SortType_Attack = 9,
+    SortType_Join = 10,
+    SortType_Lv = 11,
+    SortType_LvF = 12,
+    SortType_Kuda = 13,
+    SortType_Hp = 14,
+    SortType_MaxHp = 15,
+    SortType_MaxHpF = 16,
+    SortType_Manual = 17,
+    SortType_Price = 18,
+    SortType_NewStock = 19,
+    SortType_Have = 20,
+    SortType_Unregi = 21,
+    SortType_Comb = 22,
+    SortType_Syllabary = 23,
+    SortType_Max = 24,
+} SortType;

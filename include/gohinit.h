@@ -1,0 +1,75 @@
+#pragma once
+#include "types.h"
+#include "kernel.h"
+
+typedef struct dds3ProcessID_t dds3ProcessID_t;
+typedef struct gohData_t gohData_t;
+typedef struct gohTable_t gohTable_t;
+typedef struct sprHandle_t sprHandle_t;
+
+extern void *debugSetting;
+extern void *animChengeTbl;
+extern char *gohAssetName;
+extern char *gohDebugAssetName;
+extern s32 *c_iDevilTbl;
+extern dds3ProcessID_t *GlobalPID;
+extern dds3ProcessID_t *GlobalDrawPID;
+extern s32 gCallFromMenu;
+
+dds3ProcessID_t *gohDebugProcessStart(void);
+void gohPlayerLevelSet(s32 _lv);
+gohTable_t *gohGetTable(void);
+sprHandle_t *gohGetSpriteHandle(void);
+void *gohGetDvlFaceSprite(s32 _devilId);
+s32 gohCheckModelLoad(s32 ModelTableIndex);
+s32 ModelLoad(gohData_t *pData);
+void ModelFree(gohData_t *pData);
+void gohTableLoad(gohTable_t *pTable);
+void gohTableFree(gohTable_t *pTable);
+bool gohEvtFadeInCheck(void);
+void gohStartEtcProcess(dds3ProcessID_t *PID);
+s32 gohLoadBgModel(dds3ProcessID_t *PID, gohData_t *pData);
+s32 gohCheckLoadBgModel(gohData_t *pData);
+void gohFreeBgModel(gohData_t *pData);
+s32 gohBgmLoad(gohData_t *pData);
+s32 gohBgmPlay(gohData_t *pData);
+s32 gohBgmStop(gohData_t *pData);
+dds3ProcessFunc_t gohLoad2ndProcess(dds3ProcessID_t *PID);
+dds3ProcessFunc_t gohEventScrProcess(dds3ProcessID_t *PID);
+void gohProcessEnd(void);
+s32 gohProcessCheck(void);
+void gohDebugProcessEnd(void);
+s32 gohDebugProcessCheck(void);
+s32 gohScrCmd_GOH_EXIT(void);
+void gohStopSequence(void);
+s32 gohCheckSequence(void);
+s32 gohScrCmd_CALL_GOHMADEN(void);
+s32 gohScrCmd_RequestItemNo(void);
+s32 gohScrCmd_RequestItemCnt(void);
+s32 gohScrCmd_PresentItem(void);
+s32 gohScrCmd_AccidentType(void);
+s32 gohScrCmd_AccidentKind(void);
+s32 gohScrCmd_AccidentTypeVal(void);
+s32 gohScrCmd_AccidentCancel(void);
+s32 gohScrCmd_AccidentMajinCnt(void);
+s32 gohScrCmd_AccidentSelectMajin(void);
+s32 gohScrCmd_GetCombiCount(void);
+s32 gohScrCmd_RenkenAporion(void);
+s32 gohScrCmd_RenkenComposition(void);
+s32 gohScrCmd_RenkenResultVal(void);
+s32 gohScrCmd_RenkenSpirit(void);
+s32 gohScrCmd_RenkenEquip(void);
+s32 gohScrCmd_RenkenEquipAnime(void);
+s32 gohScrCmd_GiftInfo(void);
+s32 gohScrCmd_BirthDevilNo(void);
+s32 gohScrCmd_BirthOmoideSkillCnt(void);
+s32 gohScrCmd_GetSinanMenuIndex(void);
+dds3ProcessFunc_t gohLoad1stProcess(dds3ProcessID_t *PID);
+gohData_t *Init(void);
+void Destroy(dds3ProcessID_t *PID);
+void gohHDParClear(gohData_t *_data);
+void gohReturnToShop(void);
+dds3ProcessID_t *gohProcessStart(s32 iMode);
+dds3ProcessFunc_t gohAlwaysDrawProcess(dds3ProcessID_t *PID);
+void gohAlwaysDrawDestroy(dds3ProcessID_t *PID);
+void gohStartSequence(u32 Mode);

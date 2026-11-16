@@ -1,0 +1,10 @@
+#pragma once
+#include "types.h"
+
+typedef enum {
+    DELETE_SEQ_STAT_MES = 0,
+    DELETE_SEQ_STAT_DELETE = 1,
+    DELETE_SEQ_STAT_DELETE_ERR = 2,
+    DELETE_SEQ_STAT_DELETE_ERR_MES = 3,
+    DELETE_SEQ_STAT_RETURN = 4,
+} DELETE_SEQ_STAT;

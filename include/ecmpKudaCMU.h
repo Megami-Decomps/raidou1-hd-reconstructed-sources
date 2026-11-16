@@ -1,0 +1,31 @@
+#pragma once
+#include "types.h"
+
+typedef enum {
+    ecmpKudaCMU_None = 0,
+    ecmpKudaCMU_Devil = 1,
+    ecmpKudaCMU_Party = 2,
+    ecmpKudaCMU_UpHp = 4,
+    ecmpKudaCMU_UpMag = 8,
+    ecmpKudaCMU_RaceEN = 16,
+    ecmpKudaCMU_RaceSUI = 32,
+    ecmpKudaCMU_RaceRAI = 64,
+    ecmpKudaCMU_RaceFUU = 128,
+    ecmpKudaCMU_RaceRIK = 256,
+    ecmpKudaCMU_RaceJYU = 512,
+    ecmpKudaCMU_RaceGI = 1024,
+    ecmpKudaCMU_NoDead = 2048,
+    ecmpKudaCMU_BadSt = 4096,
+    ecmpKudaCMU_UpStr = 8192,
+    ecmpKudaCMU_UpTec = 16384,
+    ecmpKudaCMU_UpVit = 32768,
+    ecmpKudaCMU_UpLuck = 65536,
+    ecmpKudaCMU_UpCyuusei = 131072,
+    ecmpKudaCMU_NoMaigo = 262144,
+    ecmpKudaCMU_Raido = 1048576,
+    ecmpKudaCMU_Mine = 2097152,
+    ecmpKudaCMU_NotMine = 4194304,
+    ecmpKudaCMU_SklItm = 8388608,
+    ecmpKudaCMU_Exp = 16777216,
+    ecmpKudaCMU_UpHPMag = 33554432,
+} ecmpKudaCMU;

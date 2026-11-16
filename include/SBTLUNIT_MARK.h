@@ -1,0 +1,11 @@
+#pragma once
+#include "types.h"
+
+typedef enum {
+    SBTLUNIT_MARK_1SHOT = 0,
+    SBTLUNIT_MARK_DAMAGE = 1,
+    SBTLUNIT_MARK_HEAD = 2,
+    SBTLUNIT_MARK_MASIC = 10,
+    SBTLUNIT_MARK_BRESS = 11,
+    SBTLUNIT_MARK_MAHI = 20,
+} SBTLUNIT_MARK;

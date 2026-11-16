@@ -1,0 +1,20 @@
+#pragma once
+#include "types.h"
+
+typedef enum {
+    ITM_ICON_TYPE_NONE = 0,
+    ITM_ICON_TYPE_USE = 1,
+    ITM_ICON_TYPE_NO_USE = 2,
+    ITM_ICON_TYPE_MASYOU = 3,
+    ITM_ICON_TYPE_KITYOU = 4,
+    ITM_ICON_TYPE_TACHI = 5,
+    ITM_ICON_TYPE_YARI = 6,
+    ITM_ICON_TYPE_ONO = 7,
+    ITM_ICON_TYPE_RECV = 8,
+    ITM_ICON_TYPE_UP = 9,
+    ITM_ICON_TYPE_EXP = 10,
+    ITM_ICON_TYPE_SAKE = 11,
+    ITM_ICON_TYPE_SP = 12,
+    ITM_ICON_TYPE_SKL = 13,
+    ITM_ICON_TYPE_GOLD = 14,
+} ITM_ICON_TYPE;

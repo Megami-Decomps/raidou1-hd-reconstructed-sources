@@ -1,0 +1,80 @@
+#pragma once
+#include "types.h"
+#include "SBTLACTION_ST.h"
+#include "SKLID.h"
+
+typedef struct SBTLUNIT_WORK SBTLUNIT_WORK;
+
+extern bool pauseSe;
+extern SBTLUNIT_WORK *bs_akama2_wk;
+
+bool sBtlProcParticle(void *particle, void *gobj, bool wnonclr, bool *nostop_eff);
+bool sBtlProcParticleSub(void *particle, void *gobj, bool wnonclr, bool nostop);
+void sBtlBsSoundInit(void);
+void sBtlBsSoundPlayPos(const sdfVector4_t *pos, u32 smgno);
+void sBtlBsSoundPlay(SBTLUNIT_WORK *wk, u32 smgno);
+void sBtlEnemyPush(SBTLUNIT_WORK *wk, bool is_setuma);
+void sBtlEnemyPop(SBTLUNIT_WORK *wk, bool is_setuma);
+void sBtlNBS_AisyoSet(SBTLUNIT_WORK *wk, bool _mukou);
+void sBtlBS_AKAMA2_Init_Taxi(SBTLUNIT_WORK *wk);
+bool sBtlBS_AKAMA2_Action_Taxi(SBTLUNIT_WORK *wk, const sdfVector4_t *oldpos);
+void sBtlBS_AKAMA2_Hit(SBTLUNIT_WORK *wk, SKLID skillid, const sdfVector4_t *beffPos);
+bool sBtlBS_AKAMA2_HitKaihi(SBTLUNIT_WORK *pu);
+void sBtlBS_ITIMOK_Init_Kaiten(SBTLUNIT_WORK *wk);
+bool sBtlBS_ITIMOK_Action_Kaiten(SBTLUNIT_WORK *wk, const sdfVector4_t *oldpos);
+void sBtlBS_LASTB1_Init_Setu(SBTLUNIT_WORK *wk);
+bool sBtlBS_LASTB1_Action_Setu(SBTLUNIT_WORK *wk, const sdfVector4_t *oldpos);
+void sBtlBS_LASTB1_Action_Setu_ResetWince(SBTLUNIT_WORK *wk);
+void sBtlBS_LASTB1_Action_Setu_End(SBTLUNIT_WORK *wk);
+void sBtlBS_LASTB1_Init_Setr(SBTLUNIT_WORK *wk);
+bool sBtlBS_LASTB1_Action_Setr(SBTLUNIT_WORK *wk, const sdfVector4_t *oldpos);
+void sBtlBS_LASTB1_Action_Setr_End(SBTLUNIT_WORK *wk);
+void sBtlBS_LASTB1_Init_Dang(SBTLUNIT_WORK *wk);
+bool sBtlBS_LASTB1_Action_Dang(SBTLUNIT_WORK *wk, const sdfVector4_t *oldpos);
+bool sBtlBS_LASTB1_Action_DangCheck(SBTLUNIT_WORK *wk);
+bool BS_LASTB1_Action_DangCheck(SBTLUNIT_WORK *_wk, SKLID _sklID);
+void sBtlBS_LASTB1_Init_Dsmn(SBTLUNIT_WORK *wk);
+bool sBtlBS_LASTB1_Action_Dsmn(SBTLUNIT_WORK *wk, const sdfVector4_t *oldpos);
+void sBtlBS_LASTB1_Init_Gurd(SBTLUNIT_WORK *wk);
+bool sBtlBS_LASTB1_Action_Gurd(SBTLUNIT_WORK *wk, const sdfVector4_t *oldpos);
+void sBtlBS_LASTB1_Init_Bstp(SBTLUNIT_WORK *wk);
+bool sBtlBS_LASTB1_Action_Bstp(SBTLUNIT_WORK *wk, const sdfVector4_t *oldpos);
+void sBtlBS_LASTB1_Init_Quik(SBTLUNIT_WORK *wk);
+bool sBtlBS_LASTB1_Action_Quik(SBTLUNIT_WORK *wk, const sdfVector4_t *oldpos);
+void sBtlBS_LASTB1_Action_Req(void);
+void sBtlBS_LASTB1_Action_Set(SBTLUNIT_WORK *wk);
+void sBtlBS_MATORY_Init_Nenr(SBTLUNIT_WORK *wk);
+bool sBtlBS_MATORY_Action_Nenr(SBTLUNIT_WORK *wk, const sdfVector4_t *oldpos);
+void sBtlBS_MATORY_Dmg(SBTLUNIT_WORK *wk, SBTLUNIT_WORK *user, SKLID skillid);
+void sBtlBS_MISHAK_Init_Hiru(SBTLUNIT_WORK *wk);
+bool sBtlBS_MISHAK_Action_Hiru(SBTLUNIT_WORK *wk, const sdfVector4_t *oldpos);
+void sBtlBS_MISHAK_Hit(SBTLUNIT_WORK *wk, SKLID skillid, const sdfVector4_t *beffPos);
+void sBtlBS_MISHAK_Action_Hiru_Cancel(void);
+void sBtlBS_MISHAK_Action_Hiru_DamageMotion(SBTLUNIT_WORK *wk);
+void sBtlBS_MUNAKA_Init_Imad(SBTLUNIT_WORK *wk);
+void sBtlBS_MUNAKA_Init_Imad_Restart(SBTLUNIT_WORK *wk);
+bool sBtlBS_MUNAKA_Action_Imad(SBTLUNIT_WORK *wk, const sdfVector4_t *oldpos);
+bool sBtlChk_BS_MUNAKA_SetsumaNG(void);
+void sBtlBS_RASUPU_Init_Nenr(SBTLUNIT_WORK *wk);
+bool sBtlBS_RASUPU_Action_Nenr(SBTLUNIT_WORK *wk, const sdfVector4_t *oldpos);
+SBTLUNIT_WORK *sBtlSearchDeivl(s32 devilID);
+void sBtlBS_RASUPU_Dead_EffStop0(void);
+void sBtlBS_RASUPU_Dead_EffStop(void);
+void sBtlBS_YOMI_Init_Gun(SBTLUNIT_WORK *wk);
+bool sBtlBS_YOMI_Action_Gun(SBTLUNIT_WORK *wk, const sdfVector4_t *oldpos);
+s32 sBtlGetSklTimeStop(SKLID sklID);
+SBTLUNIT_WORK *sBtlGetAnotherEnemy(SBTLUNIT_WORK *wk);
+void sBtlLockOnFree(SBTLUNIT_WORK *wk);
+bool Proc(SBTLUNIT_WORK *wk);
+bool sBtlCheckNextAction(SBTLUNIT_WORK *wk);
+bool sBtlSetMotionHit(SBTLUNIT_WORK *wk, s32 motionno, SKLID skillid);
+bool sBtlSetUseSkill(SBTLUNIT_WORK *wk, SKLID skillid, s32 after_frame);
+bool sBtlSetHangekiFlag(SBTLUNIT_WORK *wk);
+bool sBtlSetAction(SBTLUNIT_WORK *wk, SBTLACTION_ST status, s32 cmpframe);
+bool sBtlCheckStatus_Move(SBTLUNIT_WORK *wk);
+void sBtlRunSklProc(void);
+void sBtlEisyoWaitTask(void);
+void sBtlAttackwaitWaitTask(void);
+void sBtlZakoRouletteSet(SBTLUNIT_WORK *wk);
+void sBtlZakoWarpReset(SBTLUNIT_WORK *wk);
+void sBtlBossWarpReset(SBTLUNIT_WORK *wk);

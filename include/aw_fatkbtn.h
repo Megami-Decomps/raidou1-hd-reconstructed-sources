@@ -1,0 +1,13 @@
+#pragma once
+#include "types.h"
+
+typedef struct AW_WORK_t AW_WORK_t;
+
+void Init(void);
+s32 Add(s32 _SubIdx, const sdfVector3_t *_Pos3D);
+void DeleteAll(void);
+void OnVisible(s32 _SubIdx, const sdfVector3_t *_Pos3D);
+void OffVisible(s32 _SubIdx);
+void Cng(s32 _SubIdx);
+void Calc(AW_WORK_t *aWork);
+void Draw(AW_WORK_t *aWork);

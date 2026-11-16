@@ -1,0 +1,183 @@
+{
+ "ScriptMethod": [
+  {
+   "Address": 28599840,
+   "Name": "Project.fld.Save_t$$.ctor",
+   "Signature": "void Project_fld_Save_t___ctor (Project_fld_Save_t_o* __this, const MethodInfo* method);"
+  },
+  {
+   "Address": 35570064,
+   "Name": "Project.SKIL176$$.ctor",
+   "Signature": "void Project_SKIL176___ctor (Project_SKIL176_o* __this, const MethodInfo* method);"
+  },
+  {
+   "Address": 36028736,
+   "Name": "Project.libsdf.sdf3DViewportPacket_t$$SetTrace",
+   "Signature": "void Project_libsdf_sdf3DViewportPacket_t__SetTrace (Project_libsdf_sdf3DViewportPacket_t_o* __this, Project_libsdf_sdf3DViewportPacket_t_o* src, const MethodInfo* method);"
+  },
+  {
+   "Address": 36028752,
+   "Name": "Project.libsdf.sdf3DViewportPacket_t$$OtClose",
+   "Signature": "void Project_libsdf_sdf3DViewportPacket_t__OtClose (Project_libsdf_sdf3DViewportPacket_t_o* __this, Project_libsdf_sdfGrPacketHeader_t_Param_o* param, const MethodInfo* method);"
+  },
+  {
+   "Address": 36029008,
+   "Name": "Project.libsdf.sdf3DViewportPacket_t$$.ctor",
+   "Signature": "void Project_libsdf_sdf3DViewportPacket_t___ctor (Project_libsdf_sdf3DViewportPacket_t_o* __this, const MethodInfo* method);"
+  },
+  {
+   "Address": 36033840,
+   "Name": "Project.libsdf.sdfGrPacketHeader_t$$OtClose",
+   "Signature": "void Project_libsdf_sdfGrPacketHeader_t__OtClose (Project_libsdf_sdfGrPacketHeader_t_o* __this, Project_libsdf_sdfGrPacketHeader_t_Param_o* param, const MethodInfo* method);"
+  },
+  {
+   "Address": 36033856,
+   "Name": "Project.libsdf.sdfGrPacketHeader_t$$.ctor",
+   "Signature": "void Project_libsdf_sdfGrPacketHeader_t___ctor (Project_libsdf_sdfGrPacketHeader_t_o* __this, const MethodInfo* method);"
+  },
+  {
+   "Address": 36190000,
+   "Name": "Project.Kernel.dds3ProcessFunc_t$$.ctor",
+   "Signature": "void Project_Kernel_dds3ProcessFunc_t___ctor (Project_Kernel_dds3ProcessFunc_t_o* __this, Il2CppObject* object, intptr_t method, const MethodInfo* method);"
+  },
+  {
+   "Address": 36206304,
+   "Name": "Project.Kernel.dds3ProcessFunc_t$$Invoke",
+   "Signature": "Project_Kernel_dds3ProcessFunc_t_o* Project_Kernel_dds3ProcessFunc_t__Invoke (Project_Kernel_dds3ProcessFunc_t_o* __this, Project_Kernel_dds3ProcessID_t_o* UnnamedParameter, const MethodInfo* method);"
+  },
+  {
+   "Address": 36206336,
+   "Name": "Project.Kernel.dds3ProcessFunc_t$$BeginInvoke",
+   "Signature": "System_IAsyncResult_o* Project_Kernel_dds3ProcessFunc_t__BeginInvoke (Project_Kernel_dds3ProcessFunc_t_o* __this, Project_Kernel_dds3ProcessID_t_o* UnnamedParameter, System_AsyncCallback_o* callback, Il2CppObject* object, const MethodInfo* method);"
+  },
+  {
+   "Address": 36206384,
+   "Name": "Project.Kernel.dds3ProcessFunc_t$$EndInvoke",
+   "Signature": "Project_Kernel_dds3ProcessFunc_t_o* Project_Kernel_dds3ProcessFunc_t__EndInvoke (Project_Kernel_dds3ProcessFunc_t_o* __this, System_IAsyncResult_o* result, const MethodInfo* method);"
+  },
+  {
+   "Address": 36192624,
+   "Name": "Project.Kernel.shutdownfuncDelegate$$.ctor",
+   "Signature": "void Project_Kernel_shutdownfuncDelegate___ctor (Project_Kernel_shutdownfuncDelegate_o* __this, Il2CppObject* object, intptr_t method, const MethodInfo* method);"
+  },
+  {
+   "Address": 36206784,
+   "Name": "Project.Kernel.shutdownfuncDelegate$$Invoke",
+   "Signature": "void Project_Kernel_shutdownfuncDelegate__Invoke (Project_Kernel_shutdownfuncDelegate_o* __this, Project_Kernel_dds3ProcessID_t_o* id, const MethodInfo* method);"
+  },
+  {
+   "Address": 36206816,
+   "Name": "Project.Kernel.shutdownfuncDelegate$$BeginInvoke",
+   "Signature": "System_IAsyncResult_o* Project_Kernel_shutdownfuncDelegate__BeginInvoke (Project_Kernel_shutdownfuncDelegate_o* __this, Project_Kernel_dds3ProcessID_t_o* id, System_AsyncCallback_o* callback, Il2CppObject* object, const MethodInfo* method);"
+  },
+  {
+   "Address": 36206864,
+   "Name": "Project.Kernel.shutdownfuncDelegate$$EndInvoke",
+   "Signature": "void Project_Kernel_shutdownfuncDelegate__EndInvoke (Project_Kernel_shutdownfuncDelegate_o* __this, System_IAsyncResult_o* result, const MethodInfo* method);"
+  },
+  {
+   "Address": 36206880,
+   "Name": "Project.Kernel.dds3ProcessID_t$$Clone",
+   "Signature": "Project_Kernel_dds3ProcessID_t_o* Project_Kernel_dds3ProcessID_t__Clone (Project_Kernel_dds3ProcessID_t_o* __this, const MethodInfo* method);"
+  },
+  {
+   "Address": 36203216,
+   "Name": "Project.Kernel.dds3ProcessID_t$$.ctor",
+   "Signature": "void Project_Kernel_dds3ProcessID_t___ctor (Project_Kernel_dds3ProcessID_t_o* __this, const MethodInfo* method);"
+  },
+  {
+   "Address": 36194192,
+   "Name": "Project.Kernel.dds3KernelCore$$.ctor",
+   "Signature": "void Project_Kernel_dds3KernelCore___ctor (Project_Kernel_dds3KernelCore_o* __this, const MethodInfo* method);"
+  },
+  {
+   "Address": 36194208,
+   "Name": "Project.Kernel.dds3KernelCore$$Init",
+   "Signature": "void Project_Kernel_dds3KernelCore__Init (const MethodInfo* method);"
+  },
+  {
+   "Address": 36194448,
+   "Name": "Project.Kernel.dds3KernelCore$$_EndProcess",
+   "Signature": "void Project_Kernel_dds3KernelCore___EndProcess (Project_Kernel_dds3ProcessID_t_o* setp, const MethodInfo* method);"
+  },
+  {
+   "Address": 36194640,
+   "Name": "Project.Kernel.dds3KernelCore$$DeleteProcessList",
+   "Signature": "void Project_Kernel_dds3KernelCore__DeleteProcessList (Project_Kernel_dds3ProcessID_t_o* setp, const MethodInfo* method);"
+  },
+  {
+   "Address": 36195312,
+   "Name": "Project.Kernel.dds3KernelCore$$AddProcessList",
+   "Signature": "void Project_Kernel_dds3KernelCore__AddProcessList (Project_Kernel_dds3ProcessID_t_o* setp, const MethodInfo* method);"
+  },
+  {
+   "Address": 36196960,
+   "Name": "Project.Kernel.dds3KernelCore$$_StartProcess",
+   "Signature": "void Project_Kernel_dds3KernelCore___StartProcess (Project_Kernel_dds3ProcessID_t_o* setp, const MethodInfo* method);"
+  },
+  {
+   "Address": 36197088,
+   "Name": "Project.Kernel.dds3KernelCore$$StartingProcess",
+   "Signature": "void Project_Kernel_dds3KernelCore__StartingProcess (const MethodInfo* method);"
+  },
+  {
+   "Address": 36197392,
+   "Name": "Project.Kernel.dds3KernelCore$$PadEi",
+   "Signature": "void Project_Kernel_dds3KernelCore__PadEi (const MethodInfo* method);"
+  },
+  {
+   "Address": 36198240,
+   "Name": "Project.Kernel.dds3KernelCore$$RunProcess",
+   "Signature": "bool Project_Kernel_dds3KernelCore__RunProcess (Project_Kernel_dds3ProcessID_t_o* pro, const MethodInfo* method);"
+  },
+  {
+   "Address": 36199232,
+   "Name": "Project.Kernel.dds3KernelCore$$RunningProcess",
+   "Signature": "void Project_Kernel_dds3KernelCore__RunningProcess (const MethodInfo* method);"
+  },
+  {
+   "Address": 36196608,
+   "Name": "Project.Kernel.dds3KernelCore$$_KillProcess",
+   "Signature": "void Project_Kernel_dds3KernelCore___KillProcess (Project_Kernel_dds3ProcessID_t_o* setp, const MethodInfo* method);"
+  },
+  {
+   "Address": 36200288,
+   "Name": "Project.Kernel.dds3KernelCore$$EndingProcess",
+   "Signature": "void Project_Kernel_dds3KernelCore__EndingProcess (const MethodInfo* method);"
+  },
+  {
+   "Address": 27505952,
+   "Name": "Project.fld$$GetMapOBJs",
+   "Signature": "Project_fld_MAP_OBJ_t_array* Project_fld__GetMapOBJs (const MethodInfo* method);"
+  },
+  {
+   "Address": 27506080,
+   "Name": "Project.fld$$GetGridEveHits",
+   "Signature": "Project_fld_MAP_GRIDEVEHIT_t_array* Project_fld__GetGridEveHits (const MethodInfo* method);"
+  },
+  {
+   "Address": 27506208,
+   "Name": "Project.fld$$ReloadDvDispHukidashiState",
+   "Signature": "void Project_fld__ReloadDvDispHukidashiState (const MethodInfo* method);"
+  },
+  {
+   "Address": 27506720,
+   "Name": "Project.fld$$CallFieldResult",
+   "Signature": "void Project_fld__CallFieldResult (const MethodInfo* method);"
+  }
+ ],
+ "ScriptString": [
+  {
+   "Address": 83955832,
+   "Value": ""
+  },
+  {
+   "Address": 83955840,
+   "Value": "\u0000"
+  },
+  {
+   "Address": 83955848,
+   "Value": "\u0000\u0000\u0001\t"
+  }
+ ]
+}

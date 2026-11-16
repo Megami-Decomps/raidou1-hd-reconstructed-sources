@@ -1,0 +1,15 @@
+#pragma once
+#include "types.h"
+
+typedef enum {
+    MODELTYPE_HUMAN = 0,
+    MODELTYPE_DEVIL = 1,
+    MODELTYPE_FIELD = 2,
+    MODELTYPE_EVENT = 3,
+    MODELTYPE_TEST = 4,
+    MODELTYPE_EFFECT = 5,
+    MODELTYPE_TALK = 6,
+    MODELTYPE_DEVILHI = 7,
+    MODELTYPE_MAHJONG = 8,
+    MODELTYPE_MAX = 9,
+} MODELTYPE;

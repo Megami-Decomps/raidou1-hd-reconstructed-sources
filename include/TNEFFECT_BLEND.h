@@ -1,0 +1,13 @@
+#pragma once
+#include "types.h"
+
+typedef enum {
+    TNEFFECT_BLEND_OPAQUE = 0,
+    TNEFFECT_BLEND_SEMI = 1,
+    TNEFFECT_BLEND_ADD = 2,
+    TNEFFECT_BLEND_SUB = 3,
+    TNEFFECT_BLEND_SUB2 = 4,
+    TNEFFECT_BLEND_NEG_SEMI = 5,
+    TNEFFECT_BLEND_NEG_SUB = 6,
+    TNEFFECT_BLEND_MAX = 7,
+} TNEFFECT_BLEND;

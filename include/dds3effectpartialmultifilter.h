@@ -1,0 +1,10 @@
+#pragma once
+#include "types.h"
+
+typedef struct dds3Effect_PartialMultiFilterParam_t dds3Effect_PartialMultiFilterParam_t;
+typedef struct effPartialMultiFilterHandle_t effPartialMultiFilterHandle_t;
+
+effPartialMultiFilterHandle_t *dds3EffectPartialMultiFilterCreate(dds3Effect_PartialMultiFilterParam_t *pParam);
+void dds3EffectPartialMultiFilterDelete(effPartialMultiFilterHandle_t *hPartialMultiFilter);
+void dds3EffectPartialMultiFilterDraw(effPartialMultiFilterHandle_t *hPartialMultiFilter);
+void dds3EffectPartialMultiFilterDrawI4(effPartialMultiFilterHandle_t *hPartialMultiFilter);

@@ -1,0 +1,9 @@
+/tools/inputs/*.dat
+/tools/inputs/*.c
+/tools/inputs/*.h
+/tools/inputs/*.map
+/tools/inputs/*.cs
+/tools/inputs/*.json
+__pycache__/
+*:Zone.Identifier
+*.egg-info/

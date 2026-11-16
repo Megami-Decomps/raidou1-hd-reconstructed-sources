@@ -1,0 +1,9 @@
+#pragma once
+#include "types.h"
+
+typedef struct dds3Effect_DistortionBlurParam_t dds3Effect_DistortionBlurParam_t;
+typedef struct effDistortionBlurHandle_t effDistortionBlurHandle_t;
+
+effDistortionBlurHandle_t *dds3EffectDistortionBlurCreate(dds3Effect_DistortionBlurParam_t *pParam);
+void dds3EffectDistortionBlurDelete(effDistortionBlurHandle_t *hDistortionBlur);
+void dds3EffectDistortionBlurDraw(effDistortionBlurHandle_t *hDistortionBlur);

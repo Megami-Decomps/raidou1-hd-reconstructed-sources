@@ -1,0 +1,17 @@
+#pragma once
+#include "types.h"
+
+typedef enum {
+    TITLE_STEP_INIT = 0,
+    TITLE_STEP_LOADBGM = 1,
+    TITLE_STEP_WAITBGM = 2,
+    TITLE_STEP_ATLUS = 3,
+    TITLE_STEP_DEV1 = 4,
+    TITLE_STEP_MOVIE = 5,
+    TITLE_STEP_TITLE = 6,
+    TITLE_STEP_MENU = 7,
+    TITLE_STEP_SELECTION = 8,
+    TITLE_STEP_NAMEENTRY = 9,
+    TITLE_STEP_RELEASE = 10,
+    TITLE_STEP_END = 11,
+} TITLE_STEP;

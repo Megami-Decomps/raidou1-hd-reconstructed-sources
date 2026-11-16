@@ -1,0 +1,97 @@
+#pragma once
+#include "types.h"
+#include "kernel.h"
+
+typedef struct dds3ProcessID_t dds3ProcessID_t;
+typedef struct fileLoadAsset_Request fileLoadAsset_Request;
+typedef struct tagSHP_DBG_WK tagSHP_DBG_WK;
+typedef struct tagSHP_WK tagSHP_WK;
+
+struct tagSHP_DBG_WK {
+    dds3ProcessID_t *menuPID;
+    s16 step;
+    s16 selno;
+};
+
+extern tagSHP_WK *s_wk;
+extern dds3ProcessID_t *g_mainPID;
+extern bool g_bCallRelease;
+extern bool g_NoRelese;
+extern s32 g_endmode;
+extern s32 g_shptype;
+extern dds3ProcessID_t *g_rootPID;
+extern tagSHP_DBG_WK *s_dbgwk;
+extern dds3ProcessID_t *g_debugPID;
+extern void *SMDP;
+extern bool g_shpsave;
+extern bool g_shop_campOpen;
+extern bool g_shopEvent;
+extern bool SE_NotKillFlag;
+extern void *shpCameraPar;
+extern char *strName;
+extern char *strMenu;
+extern s16 **arrConvModelID;
+extern f32 *arrCharTargetY;
+extern s32 *arrOrderModelID;
+extern fileLoadAsset_Request *UIsceneLoadReq;
+extern fileLoadAsset_Request *sceneLoadReq;
+extern bool MenuActive;
+extern f32 shpSetMenuMilkHall_x2;
+extern f32 shpSetMenuMilkHall_y2;
+extern u8 g_rootstep;
+extern u8 g_rootcnt;
+
+void shpCallProcEnd(void);
+u8 shpCheckProcEnd(void);
+u8 ProcessEnd(void);
+s32 shpMakeIndexList(s32 a_listtype, s16 *a_pList, bool _bo);
+s32 datGetItemNumEquipMinus(s32 id);
+s32 nwdCheckLoadModel(s32 ModelTableIndex);
+void nwdLoadModel(void);
+s32 *shpGets_wk_CharID(void);
+void shpMenuChkSelect(void);
+void shpSetMenuParam(s16 a_menuId, s16 a_actType, s16 a_charId, s16 a_objId);
+void shpSetMenuKonnouya(void);
+void shpSetMenuMilkHall(void);
+void shpNpcGetCursorPos(s32 _num, s32 *_x, s32 *_y);
+void shpSetMoveBack(f32 a_tgtx, f32 a_tgty, f32 a_tgtz, f32 a_ratio, s32 a_frame);
+void shpSetMoveBackDef(s32 a_frame);
+void shpUpdateBack(void);
+void shpInitFunc(void);
+void shpInitBack(void);
+void shpInit(void);
+void shpRelease(void);
+void shpLoadLocalizeTextData(void);
+dds3ProcessFunc_t shpProcess(dds3ProcessID_t *proc);
+void shpSetColorModel(u32 a_abgr, s32 a_defObjId);
+void shpDrawBack(void);
+void shpDrawGoodPoint(void);
+dds3ProcessFunc_t shpDrawProcess(dds3ProcessID_t *proc);
+s16 shpGetListItemNo(s32 a_listNo);
+s32 shpGetActType(void);
+void shpSetZoom(s32 a_objId);
+void shpSetDrawNewspaper(bool a_bDraw);
+void shpSetStatDraw(bool a_bDraw);
+s32 shpGetSelectItemID(void);
+s32 shpGetModelHandle(void);
+s32 shpSetModelMotion(void);
+s32 shpCallRelease(void);
+s32 shpWaitRelease(void);
+s32 nwdGetSelectModelID(void);
+s32 knyGetIntimateRank(void);
+s32 nwdGetIntimateRank(void);
+void shpLoadModel(void);
+void shpShutdown(dds3ProcessID_t *proc);
+dds3ProcessID_t *ProcessStart(s32 a_shoptype);
+s32 ProcessCheck(void);
+void shpRootCallProcEnd(void);
+u8 shpRootCheckProcEnd(void);
+dds3ProcessFunc_t shpRootProcess(dds3ProcessID_t *PID);
+void shpRootShutdown(dds3ProcessID_t *PID);
+void shpProcessStart(s32 a_shoptype);
+void shpKonnouyaProcessStart(void);
+void shpMilkHallProcessStart(void);
+void shpProcessEnd(void);
+bool shpProcessCheck(void);
+s32 shpGetShopType(void);
+bool shpCheckLoadShopUI(void);

@@ -1,0 +1,12 @@
+#pragma once
+#include "types.h"
+
+typedef enum {
+    CMP_STATUS_MODE_STATUS = 1,
+    CMP_STATUS_MODE_VIEWER = 2,
+    CMP_STATUS_MODE_GUIDE = 4,
+    CMP_STATUS_MODE_END = 8,
+    CMP_STATUS_MODE_SWORD = 16,
+    CMP_STATUS_MODE_CHANGE = 65536,
+    CMP_STATUS_MODE_SWORD_SEL = 32,
+} CMP_STATUS_MODE;

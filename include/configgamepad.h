@@ -1,0 +1,173 @@
+#pragma once
+#include "types.h"
+#include "libsdf.h"
+
+typedef enum {
+    GamePadSet_Decision = 0,
+    GamePadSet_Priset = 1,
+    GamePadSet_Sensitivity = 2,
+    GamePadSet_Enter = 3,
+    GamePadSet_Cancel = 4,
+    GamePadSet_SordAttackS = 5,
+    GamePadSet_SordAttackL = 6,
+    GamePadSet_Jump = 7,
+    GamePadSet_Avoidance = 8,
+    GamePadSet_Defense = 9,
+    GamePadSet_Setuma = 10,
+    GamePadSet_SpiritWaza = 11,
+    GamePadSet_LookChange = 12,
+    GamePadSet_LookChangeL = 13,
+    GamePadSet_LookChangeR = 14,
+    GamePadSet_LookChangeF = 15,
+    GamePadSet_LookChangeN = 16,
+    GamePadSet_GunStance = 17,
+    GamePadSet_Shooting = 18,
+    GamePadSet_BtlActionChange = 19,
+    GamePadSet_Huuma = 20,
+    GamePadSet_SpecialSkill1 = 21,
+    GamePadSet_SpecialSkill2 = 22,
+    GamePadSet_SpecialSkill3 = 23,
+    GamePadSet_Natk = 24,
+    GamePadSet_Nwaza = 25,
+    GamePadSet_NAvoidance = 26,
+    GamePadSet_Ndef = 27,
+    GamePadSet_NLookChange = 28,
+    GamePadSet_NLookChangeL = 29,
+    GamePadSet_NLookChangeR = 30,
+    GamePadSet_NLookChangeF = 31,
+    GamePadSet_NLookChangeN = 32,
+    GamePadSet_Max = 33,
+    GamePadSet_MapMvCurU = 33,
+    GamePadSet_MapMvCurD = 34,
+    GamePadSet_MapMvCurL = 35,
+    GamePadSet_MapMvCurR = 36,
+    GamePadSet_BtlMvCurU = 37,
+    GamePadSet_BtlMvCurD = 38,
+    GamePadSet_BtlMvCurL = 39,
+    GamePadSet_BtlMvCurR = 40,
+    GamePadSet_EyeU = 41,
+    GamePadSet_EyeD = 42,
+    GamePadSet_EyeL = 43,
+    GamePadSet_EyeR = 44,
+    GamePadSet_CtgChgL = 45,
+    GamePadSet_CtgChgR = 46,
+    GamePadSet_LstPageU = 47,
+    GamePadSet_LstPageD = 48,
+    GamePadSet_Sort = 49,
+    GamePadSet_Investigation = 50,
+    GamePadSet_Camp = 51,
+    GamePadSet_AutoMap = 52,
+    GamePadSet_Express = 53,
+    GamePadSet_SprintTrig = 54,
+    GamePadSet_SprintToggle = 55,
+    GamePadSet_InvSkill = 56,
+    GamePadSet_Onmitu = 57,
+    GamePadSet_OnmituTarget = 58,
+    GamePadSet_Memoirs = 59,
+    GamePadSet_InvInfo = 60,
+    GamePadSet_SubTutoScrU = 61,
+    GamePadSet_SubTutoScrD = 62,
+    GamePadSet_SubNakamaRet = 63,
+    GamePadSet_SubNakamaExit = 64,
+    GamePadSet_SubState = 65,
+    GamePadSet_SubSwSpc = 66,
+    GamePadSet_SubCtrl = 67,
+    GamePadSet_SubConfig = 68,
+    GamePadSet_StCharChgU = 69,
+    GamePadSet_StCharChgD = 70,
+    GamePadSet_StTitle = 71,
+    GamePadSet_StSword = 72,
+    GamePadSet_StSpc = 73,
+    GamePadSet_StBeHis = 74,
+    GamePadSet_StMemChg = 75,
+    GamePadSet_StMemHis = 76,
+    GamePadSet_StChrApp = 77,
+    GamePadSet_StChrRotL = 78,
+    GamePadSet_StChrRotR = 79,
+    GamePadSet_StChrInit = 80,
+    GamePadSet_QstScrU = 81,
+    GamePadSet_QstScrD = 82,
+    GamePadSet_QstConf = 83,
+    GamePadSet_QstReward = 84,
+    GamePadSet_MapScrU = 85,
+    GamePadSet_MapScrD = 86,
+    GamePadSet_MapScrL = 87,
+    GamePadSet_MapScrR = 88,
+    GamePadSet_MapUp = 89,
+    GamePadSet_MapDn = 90,
+    GamePadSet_MapInit = 91,
+    GamePadSet_MapChgU = 92,
+    GamePadSet_MapChgD = 93,
+    GamePadSet_MapChg = 94,
+    GamePadSet_MapInfo = 95,
+    GamePadSet_MapIcon = 96,
+    GamePadSet_Look = 97,
+    GamePadSet_Item = 98,
+    GamePadSet_MagicGlasses = 99,
+    GamePadSet_Summon = 100,
+    GamePadSet_N1Act = 101,
+    GamePadSet_N2Act = 102,
+    GamePadSet_Hiding = 103,
+    GamePadSet_NwazaCu = 104,
+    GamePadSet_NwazaCd = 105,
+    GamePadSet_Nlook = 106,
+    GamePadSet_Nmagan = 107,
+    GamePadSet_BattleUI = 108,
+    GamePadSet_BmSpc = 109,
+    GamePadSet_Skip = 110,
+    GamePadSet_AutoMsg = 111,
+    GamePadSet_MvStop = 112,
+    GamePadSet_Log = 113,
+    GamePadSet_GoChgU = 114,
+    GamePadSet_GoChgD = 115,
+    GamePadSet_GoHelp = 116,
+    GamePadSet_GoInfo = 117,
+    GamePadSet_GoSpc = 118,
+    GamePadSet_GoSchInit = 119,
+    GamePadSet_GoSchExe = 120,
+    GamePadSet_GoSpcIn = 121,
+    GamePadSet_GoInRnd = 122,
+    GamePadSet_GoSpcInEnd = 123,
+    GamePadSet_KtRegi = 124,
+    GamePadSet_KtRegiAll = 125,
+    GamePadSet_KtLvUpRegi = 126,
+    GamePadSet_KtSpc = 127,
+    GamePadSet_KtLock = 128,
+    GamePadSet_KtMem = 129,
+    GamePadSet_KtComm = 130,
+    GamePadSet_KtChrDsp = 131,
+    GamePadSet_KtReSmn = 132,
+    GamePadSet_MjNumDsp = 133,
+    GamePadSet_MjSkip = 134,
+    GamePadSet_MjRInfo = 135,
+    GamePadSet_MjRscrU = 136,
+    GamePadSet_MjRscrD = 137,
+    GamePadSet_Max2 = 138,
+} GamePadSet;
+
+extern u16 version;
+extern char *menuText;
+extern char *helpText;
+extern char *prisetText;
+extern s32 **minMaxPar;
+extern s32 *yokoCur;
+extern s32 *skipCnt;
+extern s32 *curSkipCnt;
+extern bool same_time_flag;
+
+char *ConfigGameGetSelectText(s32 _setPar, s32 _value);
+void ConfigGameInitSelectCnt(void);
+void ConfigGameInit(void);
+void ConfigGameUpdate(void);
+void ConfigGameDraw(void);
+GamePadSet ConfigGameGetSetNo_To_GamePadSet(s32 SetNo);
+s32 ConfigGameGamePadSet_To_GetSetNo(GamePadSet padset);
+bool ConfigGameChange(void);
+void ConfigGameChangeDraw(void);
+s32 *ConfigGameGetPriSet(s32 priset_no);
+bool ConfigGameIsCtrl(s32 i);
+bool ConfigGameNotSetChk(void);
+void ConfigGameSetSameTimeKey(bool _active);
+SDF_PADMAP ConfigGameGetCmnTypeCD(SDF_PADMAP id);
+SDF_PADMAP ConfigGameGetConfigPadMap(SDF_PADMAP id, bool nakama_f);
+void ConfigGameSetDuplication(void);

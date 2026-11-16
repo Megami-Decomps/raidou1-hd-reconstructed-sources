@@ -1,0 +1,72 @@
+#pragma once
+#include "types.h"
+#include "SBTLMAIN2.h"
+#include "SBTLPNL_MENU.h"
+#include "SBTLUNIT_SIDE.h"
+#include "SKLID.h"
+#include "sbtlmain.h"
+
+typedef struct SBTLAI_WORK SBTLAI_WORK;
+typedef struct dds3ProcessID_t dds3ProcessID_t;
+
+struct SBTLAI_WORK {
+    s16 stat;
+    u16 mode;
+    u16 backmode;
+    u32 status;
+    s16 act_p;
+    s16 aibuff[19];
+    s16 airnd[19];
+    SBTLUNIT_SIDE bstside;
+    u8 hcnt;
+    SBTLPNL_MENU meirei_nobk;
+    s32 syscnt_stop;
+    dds3ProcessID_t *processID;
+    s8 scr_actcheckflg;
+    u32 scrflag;
+    s32 scrcnt;
+    s32 cmpscrcnt;
+    s32 scrAutoCnt;
+    s32 scrCmpCnt;
+    s32 scrStep;
+    s32 scrStep2;
+    s32 scrStep3;
+    s32 scrStepN[8];
+    s32 scrListID;
+    f32 scrReactDist;
+    s32 scrReactSkillID;
+    s32 scrTargetCode;
+    s32 scrSkillID;
+    s16 scrMagHp[5];
+    s16 scrMagNum[5];
+    s8 scrMagFlg[5];
+    s32 actcnt;
+    s32 cmpactcnt;
+    u32 cmndFrm;
+    u32 cmndFrmMax;
+    SKLID cmndSkl;
+    s32 cmndTgt;
+    s32 cmndStk;
+    bool bCmndEnd;
+    SKLID dfltOdrSkl;
+    s32 dfltOdrTgt;
+    s32 dfltOdrStk;
+    SKLID rsvSkl;
+    s32 rsvTgt;
+    s32 rsvStk;
+    s32 atkCnt;
+    bool bFarOk;
+    SKLID usedSkl;
+    bool bWait;
+    bool bWait2;
+    s32 tgtmode;
+    SKLID RepeatOdrSkl;
+    s32 RepeatOdrTgt;
+    s32 RepeatOdrStk;
+    s32 RepeatOdrDisable;
+    s32 cancelCnt;
+    SBTLMAIN m_status;
+    SBTLMAIN2 m_status2;
+    s32 skillAct;
+    s32 wrap_after_dir;
+};

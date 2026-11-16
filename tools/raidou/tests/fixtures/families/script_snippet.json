@@ -1,0 +1,135 @@
+{
+ "ScriptMethod": [
+  {
+   "Address": 26150608,
+   "Name": "Project.SBTL$$GETITEMPARA_LOW",
+   "Signature": "int32_t Project_SBTL__GETITEMPARA_LOW (int32_t ipara, const MethodInfo* method);"
+  },
+  {
+   "Address": 26150656,
+   "Name": "Project.SBTL$$PRINTF",
+   "Signature": "void Project_SBTL__PRINTF (System_String_o* p, const MethodInfo* method);"
+  },
+  {
+   "Address": 27159520,
+   "Name": "Project.EventBg$$Awake",
+   "Signature": "void Project_EventBg__Awake (Project_EventBg_o* __this, const MethodInfo* method);"
+  },
+  {
+   "Address": 27159680,
+   "Name": "Project.EventBg$$OnDestroy",
+   "Signature": "void Project_EventBg__OnDestroy (Project_EventBg_o* __this, const MethodInfo* method);"
+  },
+  {
+   "Address": 27159776,
+   "Name": "Project.EventBg$$Set",
+   "Signature": "void Project_EventBg__Set (bool act, const MethodInfo* method);"
+  },
+  {
+   "Address": 27160048,
+   "Name": "Project.EventBg$$.ctor",
+   "Signature": "void Project_EventBg___ctor (Project_EventBg_o* __this, const MethodInfo* method);"
+  },
+  {
+   "Address": 32233312,
+   "Name": "Project.SBTLMAIN_DATA$$ClassCopy",
+   "Signature": "void Project_SBTLMAIN_DATA__ClassCopy (Project_SBTLMAIN_DATA_o* __this, Project_SBTLMAIN_DATA_o* dst, const MethodInfo* method);"
+  },
+  {
+   "Address": 32233376,
+   "Name": "Project.SBTLMAIN_DATA$$Clone",
+   "Signature": "Project_SBTLMAIN_DATA_o* Project_SBTLMAIN_DATA__Clone (Project_SBTLMAIN_DATA_o* __this, const MethodInfo* method);"
+  },
+  {
+   "Address": 32249600,
+   "Name": "Project.sBtl$$DEG_RAD",
+   "Signature": "float Project_sBtl__DEG_RAD (float x, const MethodInfo* method);"
+  },
+  {
+   "Address": 32250176,
+   "Name": "Project.sBtl$$LimitRange",
+   "Signature": "void Project_sBtl__LimitRange (int32_t* x, int32_t l, int32_t h, const MethodInfo* method);"
+  },
+  {
+   "Address": 32250208,
+   "Name": "Project.sBtl$$LimitRange",
+   "Signature": "void Project_sBtl__LimitRange (int16_t* x, int16_t l, int16_t h, const MethodInfo* method);"
+  },
+  {
+   "Address": 32250240,
+   "Name": "Project.sBtl$$LimitRange",
+   "Signature": "void Project_sBtl__LimitRange (uint32_t* x, uint32_t l, uint32_t h, const MethodInfo* method);"
+  },
+  {
+   "Address": 32250272,
+   "Name": "Project.sBtl$$LimitRange",
+   "Signature": "void Project_sBtl__LimitRange (int8_t* x, int8_t l, int8_t h, const MethodInfo* method);"
+  },
+  {
+   "Address": 32250304,
+   "Name": "Project.sBtl$$LimitRange",
+   "Signature": "void Project_sBtl__LimitRange (float* x, int32_t l, int32_t h, const MethodInfo* method);"
+  },
+  {
+   "Address": 32259248,
+   "Name": "Project.sBtl$$Init",
+   "Signature": "void Project_sBtl__Init (int32_t mode, int32_t encountno, const MethodInfo* method);"
+  },
+  {
+   "Address": 32289376,
+   "Name": "Project.sBtl$$Start",
+   "Signature": "bool Project_sBtl__Start (Project_SBTLMAIN_DATA_o* data, int32_t flg, const MethodInfo* method);"
+  },
+  {
+   "Address": 32291616,
+   "Name": "Project.sBtl$$Exit2Set",
+   "Signature": "void Project_sBtl__Exit2Set (int32_t i, const MethodInfo* method);"
+  },
+  {
+   "Address": 32293712,
+   "Name": "Project.sBtl$$Exit2",
+   "Signature": "void Project_sBtl__Exit2 (const MethodInfo* method);"
+  },
+  {
+   "Address": 32297136,
+   "Name": "Project.SBTL_$$ACTAIFLGMASK",
+   "Signature": "int32_t Project_SBTL___ACTAIFLGMASK (const MethodInfo* method);"
+  },
+  {
+   "Address": 36255056,
+   "Name": "Project.Kernel.dds3KernelDraw.DDS3_DRAW_BISTA$$.cctor",
+   "Signature": "void Project_Kernel_dds3KernelDraw_DDS3_DRAW_BISTA___cctor (const MethodInfo* method);"
+  },
+  {
+   "Address": 36255152,
+   "Name": "Project.Kernel.dds3KernelDraw.FIL_t$$.ctor",
+   "Signature": "void Project_Kernel_dds3KernelDraw_FIL_t___ctor (Project_Kernel_dds3KernelDraw_FIL_t_o* __this, const MethodInfo* method);"
+  },
+  {
+   "Address": 36207952,
+   "Name": "Project.Kernel.dds3KernelDraw$$InitDrawEnv",
+   "Signature": "void Project_Kernel_dds3KernelDraw__InitDrawEnv (const MethodInfo* method);"
+  },
+  {
+   "Address": 36210992,
+   "Name": "Project.Kernel.dds3KernelDraw$$DrawEnvPush",
+   "Signature": "void Project_Kernel_dds3KernelDraw__DrawEnvPush (const MethodInfo* method);"
+  },
+  {
+   "Address": 36213872,
+   "Name": "Project.Kernel.dds3KernelDraw$$SetQuake",
+   "Signature": "void Project_Kernel_dds3KernelDraw__SetQuake (int32_t frame, uint32_t range, const MethodInfo* method);"
+  },
+  {
+   "Address": 36215600,
+   "Name": "Project.Kernel.dds3KernelDraw$$FadeTypeSet",
+   "Signature": "void Project_Kernel_dds3KernelDraw__FadeTypeSet (int32_t eType, const MethodInfo* method);"
+  },
+  {
+   "Address": 36210272,
+   "Name": "Project.Kernel.dds3KernelDraw$$SetFinish",
+   "Signature": "void Project_Kernel_dds3KernelDraw__SetFinish (const MethodInfo* method);"
+  }
+ ],
+ "ScriptString": []
+}
